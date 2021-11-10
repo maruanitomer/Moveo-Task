@@ -5,6 +5,8 @@ import {
   Grid,
   Paper,
   Typography,
+  CircularProgress,
+  Box,
 } from "@mui/material";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -21,7 +23,7 @@ theme = responsiveFontSizes(theme);
 const useStyles = makeStyles({
   mainContainer: {
     display: "flex !important",
-    justifyContent:"center",
+    justifyContent: "center",
     alignItems: "center !important",
     marginBlock: "0px 20px",
     boxShadow: "none !important",
@@ -41,7 +43,7 @@ const useStyles = makeStyles({
     fontSize: "3rem",
     fontFamily: "Helvetica Neue",
     whiteSpace: "no",
-    marginBlockStart:"100px"
+    marginBlockStart: "100px",
   },
   header: {
     color: "black !important",
@@ -113,6 +115,8 @@ export const UserDetailScreen = () => {
       </Grid>
     </>
   ) : (
-    <div>Loading</div>
+    <Box sx={{position:"absolute", top:"50%", right:"50%"}}>
+      <CircularProgress color="secondary" />
+    </Box>
   );
 };

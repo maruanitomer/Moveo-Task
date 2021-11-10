@@ -4,6 +4,8 @@ import {
   CardMedia,
   Card,
   Button,
+  CircularProgress,
+  Box,
 } from "@mui/material";
 import { Link as MuiLink } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -103,6 +105,8 @@ export const UserDetailsCard = ({ currUser }) => {
       </Button>
     </Card>
   ) : (
-    <div>Loading </div>
+    <Box sx={{ position: "absolute", top: "50%", right: "50%" }}>
+      <CircularProgress color="secondary" />
+    </Box>
   );
 };
