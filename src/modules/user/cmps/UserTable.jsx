@@ -5,7 +5,7 @@ import { UserTableBody } from "./UserTableBody";
 export const UsersTable = ({ users, page, updateSortBy, useSort }) => {
   return (
     <TableContainer
-      style={{ maxWidth: "90vw", maxHeight: "70vh", whiteSpace: "nowrap" }}
+      sx={{  maxHeight: "70vh", whiteSpace: "nowrap" }}
       component={Paper}
     >
       <Table aria-label="simple table">

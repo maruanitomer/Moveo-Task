@@ -22,7 +22,7 @@ theme = responsiveFontSizes(theme);
 const useStyles = makeStyles({
   mainGrid: {
     display: "flex !important",
-    flexDirection:"column !important",
+    flexDirection: "column !important",
     alignItems: "center",
     justifyContent: "center",
     marginBlockEnd: "1rem",
@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     marginBlock: "20px",
-    marginBlockStart:"40px",
+    marginBlockStart: "40px",
     boxShadow: "none !important",
     maxHeight: "30vh",
   },
@@ -97,52 +97,38 @@ export const UsersScreen = () => {
           </Paper>
         </Grid>
         <Grid>
-          {useSort &&
-            (sort ? (
-              <ArrowUpwardIcon
-                // sx={{
-                //   display: "flex !important",
-                //   justifyContent: "center !important",
-                //   margin: "0 auto ",
-                //   marginBlockEnd: "10px ",
-                //   textAlign: "center ",
-                // }}
-              />
-            ) : (
-              <ArrowDownwardIcon
-                // sx={{
-                //   display: "flex !important",
-                //   justifyContent: "center !important",
-                //   margin: "0 auto ",
-                //   marginBlockEnd: "10px ",
-                //   textAlign: "center ",
-                // }}
-              />
-            ))}
-          <UsersTable
-            useSort={useSort}
-            updateSortBy={updateSortBy}
-            page={currentPageNumber}
-            users={users}
-          />
-          <ButtonGroup fullWidth={true}>
-            <Button
-              disabled={
-                currentPageNumber <= 1 && users && users.length ? true : false
-              }
-              onClick={() => pegination(0)}
-              variant="contained"
-            >
-              <ArrowBackIcon />
-            </Button>
-            <Button
-              disabled={users && users.length > 0 ? false : true}
-              onClick={() => pegination(1)}
-              variant="contained"
-            >
-              <ArrowForwardIcon />
-            </Button>
-          </ButtonGroup>
+          {useSort && (sort ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />)}
+          <Grid
+            sx={{
+              maxWidth: "90vw ",
+              marginInlineStart: "2.5vw",
+            }}
+          >
+            <UsersTable
+              useSort={useSort}
+              updateSortBy={updateSortBy}
+              page={currentPageNumber}
+              users={users}
+            />
+            <ButtonGroup fullWidth={true}>
+              <Button
+                disabled={
+                  currentPageNumber <= 1 && users && users.length ? true : false
+                }
+                onClick={() => pegination(0)}
+                variant="contained"
+              >
+                <ArrowBackIcon />
+              </Button>
+              <Button
+                disabled={users && users.length > 0 ? false : true}
+                onClick={() => pegination(1)}
+                variant="contained"
+              >
+                <ArrowForwardIcon />
+              </Button>
+            </ButtonGroup>
+          </Grid>
         </Grid>
       </Grid>
     </ThemeProvider>
