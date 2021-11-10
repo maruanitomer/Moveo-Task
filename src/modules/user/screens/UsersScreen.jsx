@@ -103,9 +103,9 @@ export const UsersScreen = () => {
                 sx={{
                   display: "flex !important",
                   justifyContent: "center !important",
-                  margin: "0 auto",
-                  marginBlockEnd: "10px",
-                  textAlign: "center",
+                  margin: "0 auto !important",
+                  marginBlockEnd: "10px !important",
+                  textAlign: "center !important",
                 }}
               />
             ) : (
@@ -113,9 +113,9 @@ export const UsersScreen = () => {
                 sx={{
                   display: "flex !important",
                   justifyContent: "center !important",
-                  margin: "0 auto",
-                  marginBlockEnd: "10px",
-                  textAlign: "center",
+                  margin: "0 auto !important",
+                  marginBlockEnd: "10px !important",
+                  textAlign: "center !important",
                 }}
               />
             ))}
