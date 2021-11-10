@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Grid, Paper, Typography } from "@mui/material";
+import { Button, ButtonGroup, Box, Paper, Typography } from "@mui/material";
 import {
   createTheme,
   responsiveFontSizes,
@@ -20,7 +20,7 @@ var theme = createTheme({});
 theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles({
-  mainGrid: {
+  mainBox: {
     display: "flex !important",
     flexDirection: "column !important",
     alignItems: "center",
@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     marginBlock: "20px",
-    marginBlockStart: "25px",
+    marginBlockStart:"30px",
     boxShadow: "none !important",
     maxHeight: "30vh",
   },
@@ -88,17 +88,17 @@ export const UsersScreen = () => {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Grid container spacing={2} className={styles.mainGrid}>
-        <Grid>
+      <Box container spacing={2} className={styles.mainBox}>
+        <Box>
           <Paper className={styles.paper}>
             <Typography className={styles.pageHeader} variant="h1" color="#fff">
               All Users
             </Typography>
           </Paper>
-        </Grid>
-        <Grid>
+        </Box>
+        <Box>
           {useSort && (sort ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />)}
-          <Grid
+          <Box
             sx={{
               maxWidth: "90vw ",
               marginInlineStart: "2.5vw",
@@ -128,9 +128,9 @@ export const UsersScreen = () => {
                 <ArrowForwardIcon />
               </Button>
             </ButtonGroup>
-          </Grid>
-        </Grid>
-      </Grid>
+          </Box>
+        </Box>
+      </Box>
     </ThemeProvider>
   );
 };
