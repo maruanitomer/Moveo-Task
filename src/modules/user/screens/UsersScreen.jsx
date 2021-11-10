@@ -22,11 +22,10 @@ theme = responsiveFontSizes(theme);
 const useStyles = makeStyles({
   mainGrid: {
     display: "flex !important",
-    flexDirection: "column !important",
     alignItems: "center",
     justifyContent: "center",
     marginBlockEnd: "1rem",
-    height: "100vh",
+    height: "70vh",
     userSelect: "none",
   },
   paper: {
