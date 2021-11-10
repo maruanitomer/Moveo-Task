@@ -2,7 +2,7 @@ import React from "react";
 import { GMapify } from "g-mapify";
 import "g-mapify/dist/index.css";
 import { Typography } from "@mui/material";
-import { googleMapKey } from "../../../key/key";
+import { googleMapKey } from "../../key";
 export const GoogleMap = ({ lat, lon, location }) => {
   const country = location.country;
   const state = location.state;
