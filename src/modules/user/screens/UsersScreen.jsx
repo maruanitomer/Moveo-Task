@@ -100,7 +100,6 @@ export const UsersScreen = () => {
           <Box
             sx={{
               maxWidth: "90vw ",
-              marginInlineStart: "2.5vw",
             }}
           >
             <UsersTable
