@@ -21,8 +21,8 @@ theme = responsiveFontSizes(theme);
 const useStyles = makeStyles({
   mainContainer: {
     display: "flex !important",
+    justifyContent:"center",
     alignItems: "center !important",
-    flexDirection: "column !important",
     marginBlock: "0px 20px",
     boxShadow: "none !important",
     height: "100%",
@@ -41,7 +41,6 @@ const useStyles = makeStyles({
     fontSize: "3rem",
     fontFamily: "Helvetica Neue",
     whiteSpace: "no",
-    display: "block",
   },
   header: {
     color: "black !important",

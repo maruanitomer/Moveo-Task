@@ -22,10 +22,10 @@ theme = responsiveFontSizes(theme);
 const useStyles = makeStyles({
   mainGrid: {
     display: "flex !important",
+    flexDirection:"column !important",
     alignItems: "center",
     justifyContent: "center",
     marginBlockEnd: "1rem",
-    height: "70vh",
     userSelect: "none",
   },
   paper: {
@@ -42,7 +42,6 @@ const useStyles = makeStyles({
     fontWeight: "normal",
     fontFamily: "Helvetica Neue",
     whiteSpace: "no",
-    display:"block"
   },
 });
 
@@ -100,23 +99,23 @@ export const UsersScreen = () => {
           {useSort &&
             (sort ? (
               <ArrowUpwardIcon
-                sx={{
-                  display: "flex !important",
-                  justifyContent: "center !important",
-                  margin: "0 auto !important",
-                  marginBlockEnd: "10px !important",
-                  textAlign: "center !important",
-                }}
+                // sx={{
+                //   display: "flex !important",
+                //   justifyContent: "center !important",
+                //   margin: "0 auto ",
+                //   marginBlockEnd: "10px ",
+                //   textAlign: "center ",
+                // }}
               />
             ) : (
               <ArrowDownwardIcon
-                sx={{
-                  display: "flex !important",
-                  justifyContent: "center !important",
-                  margin: "0 auto !important",
-                  marginBlockEnd: "10px !important",
-                  textAlign: "center !important",
-                }}
+                // sx={{
+                //   display: "flex !important",
+                //   justifyContent: "center !important",
+                //   margin: "0 auto ",
+                //   marginBlockEnd: "10px ",
+                //   textAlign: "center ",
+                // }}
               />
             ))}
           <UsersTable
