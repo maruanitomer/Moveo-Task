@@ -43,6 +43,7 @@ const useStyles = makeStyles({
     fontWeight: "normal",
     fontFamily: "Helvetica Neue",
     whiteSpace: "no",
+    display:"block"
   },
 });
 

@@ -41,6 +41,7 @@ const useStyles = makeStyles({
     fontSize: "3rem",
     fontFamily: "Helvetica Neue",
     whiteSpace: "no",
+    display: "block",
   },
   header: {
     color: "black !important",
