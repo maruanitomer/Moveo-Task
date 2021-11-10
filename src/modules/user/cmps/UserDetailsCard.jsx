@@ -47,7 +47,6 @@ export const UserDetailsCard = ({ currUser }) => {
         }}
         gutterBottom
         variant="h5"
-        component="div"
         display="flex"
         justifyContent="center"
         fontWeight="700"
