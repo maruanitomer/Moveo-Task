@@ -33,6 +33,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     marginBlock: "20px",
+    marginBlockStart:"40px",
     boxShadow: "none !important",
     maxHeight: "30vh",
   },
